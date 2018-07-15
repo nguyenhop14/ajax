@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function load_ajax() {
+            var xmlhttp;
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    document.getElementById('result').innerHTML = xmlhttp.responseText;
+
+                }
+            };
+            xmlhttp.open("GET", "re.js", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+
+<div id="result">
+    Nội dung ajax được load ở đây
+</div>
+<input type="button" name="clickme" id="clickme" onclick="load_ajax()" value="Click me">
+
+</body>
+</html>

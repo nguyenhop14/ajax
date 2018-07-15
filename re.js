@@ -1,0 +1,2 @@
+vugd
+$('#result').innerHTML = "vàguy";
